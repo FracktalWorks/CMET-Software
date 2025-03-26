@@ -101,6 +101,7 @@
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -109,6 +110,62 @@
               </property>
               <property name="text">
                <string>Pi Instruments</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="piAfterLayerStart">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>500</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Gotham</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius:20px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>After Layer Finish</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
               </property>
              </widget>
             </item>
@@ -169,7 +226,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QPushButton" name="Macro1Button">
+             <widget class="QPushButton" name="macro1Button">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -215,118 +272,6 @@ QPushButton:focus {
               </property>
               <property name="text">
                <string>Macro 1</string>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>20</width>
-                <height>20</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="piAfterLayerStart">
-              <property name="minimumSize">
-               <size>
-                <width>200</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>500</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Gotham</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton {
-    border: 1px solid rgb(87, 87, 87);
-
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-border-radius:20px;
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-              </property>
-              <property name="text">
-               <string>After Layer Finish</string>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>20</width>
-                <height>20</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QPushButton" name="piPartCleaning">
-              <property name="minimumSize">
-               <size>
-                <width>200</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>500</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <family>Gotham</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QPushButton {
-    border: 1px solid rgb(87, 87, 87);
-
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-border-radius:20px;
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-              </property>
-              <property name="text">
-               <string>Part Cleaning</string>
               </property>
               <property name="iconSize">
                <size>
@@ -392,6 +337,62 @@ QPushButton:focus {
               </property>
              </widget>
             </item>
+            <item row="5" column="1">
+             <widget class="QPushButton" name="macro2Button">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Gotham</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius:20px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Macro 2</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
             <item row="3" column="1">
              <widget class="QPushButton" name="piAfterVatChange">
               <property name="minimumSize">
@@ -448,8 +449,8 @@ QPushButton:focus {
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
-             <widget class="QPushButton" name="Macro2Button">
+            <item row="1" column="0">
+             <widget class="QPushButton" name="piPartCleaning">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -458,7 +459,7 @@ QPushButton:focus {
               </property>
               <property name="maximumSize">
                <size>
-                <width>350</width>
+                <width>500</width>
                 <height>40</height>
                </size>
               </property>
@@ -494,7 +495,7 @@ QPushButton:focus {
 }</string>
               </property>
               <property name="text">
-               <string>Macro 2</string>
+               <string>Part Cleaning</string>
               </property>
               <property name="iconSize">
                <size>
@@ -505,7 +506,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="piHomeButton">
+             <widget class="QPushButton" name="piEnableButton">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -550,7 +551,96 @@ QPushButton:focus {
 }</string>
               </property>
               <property name="text">
-               <string>Home</string>
+               <string>Enable Motion</string>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="sendGcodeFrame">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="0" column="0">
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QPushButton" name="sendGcodeButton">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Gotham</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+    border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+border-radius:20px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Send Gcode</string>
               </property>
               <property name="iconSize">
                <size>
@@ -842,6 +932,7 @@ QPushButton:focus {
              <font>
               <family>Gotham</family>
               <pointsize>12</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -1106,6 +1197,7 @@ QPushButton:focus {
              <font>
               <family>Gotham</family>
               <pointsize>12</pointsize>
+              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -1668,6 +1760,7 @@ QPushButton:focus {
             <font>
              <family>Gotham</family>
              <pointsize>12</pointsize>
+             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
@@ -1726,6 +1819,7 @@ QPushButton:focus {
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1790,6 +1884,7 @@ N50 G4 P1
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1822,6 +1917,7 @@ N50 G4 P1
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1873,6 +1969,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1888,7 +1985,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPlainTextEdit" name="initialLevellingRecoatingSequenceText_2">
+             <widget class="QPlainTextEdit" name="beforeLayerStartSequenceText">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -1937,6 +2034,7 @@ N50 G4 P1</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1988,6 +2086,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2039,6 +2138,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2091,6 +2191,7 @@ homeRecoater</string>
             <font>
              <family>Gotham</family>
              <pointsize>12</pointsize>
+             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
@@ -2149,6 +2250,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2202,6 +2304,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2255,6 +2358,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2308,6 +2412,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2361,6 +2466,7 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
+                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
