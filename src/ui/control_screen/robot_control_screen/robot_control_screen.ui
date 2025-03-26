@@ -114,17 +114,17 @@
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QPushButton" name="homeBuildModuleButton_10">
+             <widget class="QPushButton" name="removeMaterial1">
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>350</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -174,13 +174,13 @@ QPushButton:focus {
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>500</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -226,17 +226,17 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="2" column="1">
-             <widget class="QPushButton" name="preparePowderLoadingButton_9">
+             <widget class="QPushButton" name="placeMaterial2">
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>500</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -282,17 +282,17 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QPushButton" name="preparePowderLoadingButton_5">
+             <widget class="QPushButton" name="placeCleaningStation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>500</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -338,17 +338,17 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QPushButton" name="homeBuildModuleButton_9">
+             <widget class="QPushButton" name="placeMaterial1">
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>350</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -398,13 +398,13 @@ QPushButton:focus {
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>500</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -454,13 +454,13 @@ QPushButton:focus {
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>350</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -506,17 +506,17 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="homeBuildModuleButton_5">
+             <widget class="QPushButton" name="removeCleaningStation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>350</width>
-                <height>50</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -668,7 +668,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="homeZButton_4">
+           <widget class="QPushButton" name="homeZRobotButton">
             <property name="geometry">
              <rect>
               <x>10</x>
@@ -745,7 +745,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveZMButton_4">
+           <widget class="QPushButton" name="moveZMRobotButton">
             <property name="geometry">
              <rect>
               <x>10</x>

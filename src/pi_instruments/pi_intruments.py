@@ -47,19 +47,6 @@ class pi_control:
             output_widget.append(f"Error: File {file_path} not found.")
             log_error(f"File {file_path} not found.")
 
-    # Movement commands
-    def home_build_module(self):
-        self.send_command("G28 Z Y\nM400")
-        
-
-    def undock(self):
-        self.send_gcode("goDown\nM400")
-
-    def dock(self):
-        self.send_gcode("liftUp\nM400")
-
-    def home_feed(self):
-        self.send_gcode("G28 Y\nM400")
 
     # Z movements
     def home_z(self):
@@ -94,14 +81,7 @@ class pi_control:
     def move_feed_plus(self, step):
         self.send_gcode(f"G91\nG0 Y{step}\nG90\nM400")
 
-    # Temperature settings
-    def set_bed_temperature(self, temperature):
-        self.send_gcode(f"SET_HEATER_TEMPERATURE HEATER=heater_bed TARGET={temperature}")
 
-    def set_volume_temperature(self, temperature):
-        self.send_gcode(f"SET_HEATER_TEMPERATURE HEATER=bed_heater_front TARGET={temperature}")
-        self.send_gcode(f"SET_HEATER_TEMPERATURE HEATER=bed_heater_left TARGET={temperature}")
-        self.send_gcode(f"SET_HEATER_TEMPERATURE HEATER=bed_heater_right TARGET={temperature}")
     def g_codes(self):    
 
         self.btn_y_plus = QPushButton("Move Y+")

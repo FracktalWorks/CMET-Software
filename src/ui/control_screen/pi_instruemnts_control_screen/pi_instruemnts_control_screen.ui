@@ -745,7 +745,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveZMButton_4">
+           <widget class="QPushButton" name="moveZMPiButton">
             <property name="geometry">
              <rect>
               <x>10</x>
