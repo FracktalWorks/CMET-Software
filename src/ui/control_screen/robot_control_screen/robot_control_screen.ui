@@ -49,7 +49,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QFrame" name="buildModuleAutomationFrame_4">
+          <widget class="QFrame" name="robotAutomation">
            <property name="minimumSize">
             <size>
              <width>0</width>
