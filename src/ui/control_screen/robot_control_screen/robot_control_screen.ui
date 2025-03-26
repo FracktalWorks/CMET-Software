@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1438</width>
-    <height>1091</height>
+    <height>1120</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -101,7 +101,6 @@
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -114,7 +113,7 @@
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QPushButton" name="removeMaterial1">
+             <widget class="QPushButton" name="robotRemoveMaterial1">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -170,7 +169,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="5" column="0">
-             <widget class="QPushButton" name="preparePowderLoadingButton_10">
+             <widget class="QPushButton" name="robotMixVat">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -226,7 +225,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="2" column="1">
-             <widget class="QPushButton" name="placeMaterial2">
+             <widget class="QPushButton" name="robotPlaceMaterial2">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -282,7 +281,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QPushButton" name="placeCleaningStation">
+             <widget class="QPushButton" name="robotPlaceCleaningStation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -338,7 +337,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="2" column="0">
-             <widget class="QPushButton" name="placeMaterial1">
+             <widget class="QPushButton" name="robotPlaceMaterial1">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -394,7 +393,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="3" column="1">
-             <widget class="QPushButton" name="preparePowderLoadingButton_11">
+             <widget class="QPushButton" name="robotRemoveMaterial2">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -450,7 +449,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="5" column="1">
-             <widget class="QPushButton" name="homeBuildModuleButton_11">
+             <widget class="QPushButton" name="robotHomeAxis">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -506,7 +505,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="removeCleaningStation">
+             <widget class="QPushButton" name="robotRemoveCleaningStation">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -589,7 +588,7 @@ QPushButton:focus {
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QPushButton" name="moveZPButton_4">
+           <widget class="QPushButton" name="robotMoveZPButton">
             <property name="geometry">
              <rect>
               <x>10</x>
@@ -668,7 +667,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="homeZRobotButton">
+           <widget class="QPushButton" name="robotHomeZButton">
             <property name="geometry">
              <rect>
               <x>10</x>
@@ -745,7 +744,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveZMRobotButton">
+           <widget class="QPushButton" name="robotMoveZMButton">
             <property name="geometry">
              <rect>
               <x>10</x>
@@ -843,7 +842,6 @@ QPushButton:focus {
              <font>
               <family>Gotham</family>
               <pointsize>12</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -854,7 +852,7 @@ QPushButton:focus {
              <string>Z Axis</string>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveXMButton_4">
+           <widget class="QPushButton" name="robotMoveXMButton">
             <property name="geometry">
              <rect>
               <x>220</x>
@@ -933,7 +931,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveXPButton_4">
+           <widget class="QPushButton" name="robotMoveXPButton">
             <property name="geometry">
              <rect>
               <x>220</x>
@@ -1012,7 +1010,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="homeXYButton_4">
+           <widget class="QPushButton" name="robotHomeXYButton">
             <property name="geometry">
              <rect>
               <x>220</x>
@@ -1108,7 +1106,6 @@ QPushButton:focus {
              <font>
               <family>Gotham</family>
               <pointsize>12</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
              </font>
             </property>
@@ -1119,7 +1116,7 @@ QPushButton:focus {
              <string>X Y Axis </string>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveYPButton_4">
+           <widget class="QPushButton" name="robotMoveYPButton">
             <property name="geometry">
              <rect>
               <x>130</x>
@@ -1198,7 +1195,7 @@ QPushButton:focus {
              <bool>false</bool>
             </property>
            </widget>
-           <widget class="QPushButton" name="moveYMButton_4">
+           <widget class="QPushButton" name="robotMoveYMButton">
             <property name="geometry">
              <rect>
               <x>320</x>
@@ -1671,7 +1668,6 @@ QPushButton:focus {
             <font>
              <family>Gotham</family>
              <pointsize>12</pointsize>
-             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
@@ -1730,7 +1726,6 @@ QPushButton:focus {
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1795,7 +1790,6 @@ N50 G4 P1
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1828,7 +1822,6 @@ N50 G4 P1
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1880,7 +1873,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1945,7 +1937,6 @@ N50 G4 P1</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -1997,7 +1988,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2049,7 +2039,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2102,7 +2091,6 @@ homeRecoater</string>
             <font>
              <family>Gotham</family>
              <pointsize>12</pointsize>
-             <weight>50</weight>
              <bold>false</bold>
             </font>
            </property>
@@ -2161,7 +2149,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2215,7 +2202,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2269,7 +2255,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2323,7 +2308,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>
@@ -2377,7 +2361,6 @@ homeRecoater</string>
                <font>
                 <family>Gotham</family>
                 <pointsize>12</pointsize>
-                <weight>50</weight>
                 <bold>false</bold>
                </font>
               </property>

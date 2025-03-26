@@ -49,10 +49,10 @@ class pi_control:
 
 
     # Z movements
-    def home_z(self):
+    def pi_home_z(self):
         pi_control.send_command("N50 G01 Z0 F500")
 
-    def move_z_minus(self):
+    def pi_z_minus(self):
         self.send_command("N60 G01 Z-10 F500")
 
     def move_z_plus(self):
@@ -106,13 +106,13 @@ class pi_control:
  
         
         # Z-Axis Buttons
-        self.btn_z_up = QPushButton("Move Z Up")
+        self.btn_z_up = QPushButton("piMoveZPButton")
         self.btn_z_up.clicked.connect(lambda: ProcessAutomationController.send_command("N50 G01 Z10 F500", self.output_display))
         
-        self.btn_z_down = QPushButton("Move Z Down")
+        self.btn_z_down = QPushButton("piMoveZMButton")
         self.btn_z_down.clicked.connect(lambda: ProcessAutomationController.send_command("N60 G01 Z-10 F500", self.output_display))
         
         
-        self.btn_z_home = QPushButton("Z Home")
+        self.btn_z_home = QPushButton("piHomeZButton")
         self.btn_z_down.clicked.connect(lambda: ProcessAutomationController.send_command("N60 G01 Z0 F500", self.output_display))
 
