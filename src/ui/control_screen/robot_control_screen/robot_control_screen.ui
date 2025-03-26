@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1438</width>
-    <height>1120</height>
+    <width>1327</width>
+    <height>1091</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1651,7 +1651,7 @@ QPushButton:focus {
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
-          <widget class="QLabel" name="fileInfoLabel_23">
+          <widget class="QLabel" name="printerProcessSequenceLabel">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -1709,7 +1709,7 @@ QPushButton:focus {
            </property>
            <layout class="QFormLayout" name="formLayout">
             <item row="23" column="0">
-             <widget class="QLabel" name="fileInfoLabel_30">
+             <widget class="QLabel" name="placeMaterial2Label">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1741,7 +1741,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="29" column="1">
-             <widget class="QPlainTextEdit" name="initialLevellingRecoatingSequenceText_4">
+             <widget class="QPlainTextEdit" name="removeMaterial2Text">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -1757,10 +1757,11 @@ N50 G4 P1
              </widget>
             </item>
             <item row="33" column="1">
-             <widget class="QPlainTextEdit" name="initialLevellingRecoatingSequenceText_3">
+             <widget class="QPlainTextEdit" name="mixVatText">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
+                <bold>false</bold>
                </font>
               </property>
               <property name="plainText">
@@ -1773,7 +1774,7 @@ N50 G4 P1
              </widget>
             </item>
             <item row="29" column="0">
-             <widget class="QLabel" name="fileInfoLabel_33">
+             <widget class="QLabel" name="removeMaterial2Label">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1805,7 +1806,7 @@ N50 G4 P1
              </widget>
             </item>
             <item row="33" column="0">
-             <widget class="QLabel" name="fileInfoLabel_32">
+             <widget class="QLabel" name="mixVatLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1837,7 +1838,7 @@ N50 G4 P1
              </widget>
             </item>
             <item row="23" column="1">
-             <widget class="QPlainTextEdit" name="printingRecoatingSequenceText_4">
+             <widget class="QPlainTextEdit" name="placeMaterial2Text">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -1856,7 +1857,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="fileInfoLabel_24">
+             <widget class="QLabel" name="placeCleaningStationLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1888,7 +1889,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPlainTextEdit" name="initialLevellingRecoatingSequenceText_2">
+             <widget class="QPlainTextEdit" name="placeCleaningStationText">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -1904,7 +1905,7 @@ N50 G4 P1
              </widget>
             </item>
             <item row="7" column="1">
-             <widget class="QPlainTextEdit" name="heatedBufferRecoatingSequenceText_2">
+             <widget class="QPlainTextEdit" name="removeCleaningStationText">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -1920,7 +1921,7 @@ N50 G4 P1</string>
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="QLabel" name="fileInfoLabel_25">
+             <widget class="QLabel" name="removeCleaningStationLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -1952,7 +1953,7 @@ N50 G4 P1</string>
              </widget>
             </item>
             <item row="11" column="1">
-             <widget class="QPlainTextEdit" name="printingRecoatingSequenceText_2">
+             <widget class="QPlainTextEdit" name="placeMaterial1Text">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -1971,7 +1972,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="11" column="0">
-             <widget class="QLabel" name="fileInfoLabel_26">
+             <widget class="QLabel" name="placeMaterial1Label">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2003,7 +2004,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="17" column="1">
-             <widget class="QPlainTextEdit" name="printingRecoatingSequenceText_3">
+             <widget class="QPlainTextEdit" name="removeMaterial1Text">
               <property name="font">
                <font>
                 <pointsize>10</pointsize>
@@ -2022,7 +2023,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="17" column="0">
-             <widget class="QLabel" name="fileInfoLabel_31">
+             <widget class="QLabel" name="removeMaterial1Label">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2074,7 +2075,7 @@ homeRecoater</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <widget class="QLabel" name="fileInfoLabel_14">
+          <widget class="QLabel" name="processParametersLabel">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -2132,7 +2133,7 @@ homeRecoater</string>
            </property>
            <layout class="QFormLayout" name="formLayout_4">
             <item row="1" column="0">
-             <widget class="QLabel" name="fileInfoLabel_18">
+             <widget class="QLabel" name="cleaningStationDockLocationLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2167,7 +2168,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QLineEdit" name="partHeightLineEdit">
+             <widget class="QLineEdit" name="cleaningStationDockLocationText">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2185,7 +2186,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="3" column="0">
-             <widget class="QLabel" name="fileInfoLabel_19">
+             <widget class="QLabel" name="cleaningStationPlacementLocationLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2220,7 +2221,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="3" column="1">
-             <widget class="QLineEdit" name="dosingHeightLineEdit">
+             <widget class="QLineEdit" name="cleaningStationPlacementLocationText">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2238,7 +2239,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="4" column="0">
-             <widget class="QLabel" name="fileInfoLabel_15">
+             <widget class="QLabel" name="material1PickupLocationLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2273,7 +2274,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="4" column="1">
-             <widget class="QLineEdit" name="layerHeightLineEdit">
+             <widget class="QLineEdit" name="material1PickupLocationText">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2291,7 +2292,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="QLabel" name="fileInfoLabel_27">
+             <widget class="QLabel" name="material2PickupLocationLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2326,7 +2327,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="7" column="1">
-             <widget class="QLineEdit" name="bedTemperatureLineEdit">
+             <widget class="QLineEdit" name="material2PickupLocationText">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2344,7 +2345,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="8" column="0">
-             <widget class="QLabel" name="fileInfoLabel_29">
+             <widget class="QLabel" name="vatPlacementLabel">
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -2379,7 +2380,7 @@ homeRecoater</string>
              </widget>
             </item>
             <item row="8" column="1">
-             <widget class="QLineEdit" name="chamberTemperatureLineEdit">
+             <widget class="QLineEdit" name="vatPlacementText">
               <property name="minimumSize">
                <size>
                 <width>0</width>
