@@ -33,6 +33,30 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <item>
+          <widget class="QLabel" name="fileInfoLabel">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Gotham</family>
+             <pointsize>16</pointsize>
+             <weight>50</weight>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color:  grey;</string>
+           </property>
+           <property name="text">
+            <string>File Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QFrame" name="SummaryFrame">
            <property name="minimumSize">
             <size>
@@ -114,19 +138,6 @@
                    <number>0</number>
                   </property>
                   <item>
-                   <spacer name="verticalSpacer_2">
-                    <property name="orientation">
-                     <enum>Qt::Vertical</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>20</width>
-                      <height>40</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
                    <widget class="QFrame" name="frame_11">
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
@@ -190,7 +201,7 @@ QPushButton:focus {
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../resources/resource.qrc">
+                        <iconset resource="../../../../ControlCenter/src/ui/resources/resource.qrc">
                          <normaloff>:/Icons/img/icons/video-player-stop-button.png</normaloff>:/Icons/img/icons/video-player-stop-button.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -245,7 +256,7 @@ QPushButton:focus {
                         <string/>
                        </property>
                        <property name="icon">
-                        <iconset resource="../resources/resource.qrc">
+                        <iconset resource="../../../../ControlCenter/src/ui/resources/resource.qrc">
                          <normaloff>:/Icons/img/icons/play-button.png</normaloff>
                          <normalon>:/Icons/img/icons/pause-button.png</normalon>:/Icons/img/icons/play-button.png</iconset>
                        </property>
@@ -309,37 +320,6 @@ QPushButton:focus {
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_10">
                      <item>
-                      <spacer name="verticalSpacer_3">
-                       <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>20</width>
-                         <height>40</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="fileInfoLabel">
-                       <property name="font">
-                        <font>
-                         <family>Gotham</family>
-                         <pointsize>16</pointsize>
-                         <weight>50</weight>
-                         <bold>false</bold>
-                        </font>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">color:  grey;</string>
-                       </property>
-                       <property name="text">
-                        <string>File Name:</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QPushButton" name="loadFileButton">
                        <property name="minimumSize">
                         <size>
@@ -385,10 +365,10 @@ QPushButton:focus {
 }</string>
                        </property>
                        <property name="text">
-                        <string>Load File(s)</string>
+                        <string>Load Folder</string>
                        </property>
                        <property name="icon">
-                        <iconset resource="../resources/resource.qrc">
+                        <iconset resource="../../../../ControlCenter/src/ui/resources/resource.qrc">
                          <normaloff>:/Icons/img/icons/folder.png</normaloff>:/Icons/img/icons/folder.png</iconset>
                        </property>
                        <property name="iconSize">
@@ -417,6 +397,9 @@ QPushButton:focus {
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QVBoxLayout" name="verticalLayout_12">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
                      <property name="leftMargin">
                       <number>0</number>
                      </property>
@@ -429,19 +412,6 @@ QPushButton:focus {
                      <property name="bottomMargin">
                       <number>0</number>
                      </property>
-                     <item>
-                      <spacer name="verticalSpacer_4">
-                       <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>20</width>
-                         <height>40</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
                      <item>
                       <widget class="QWidget" name="previewWidget" native="true">
                        <property name="sizePolicy">
@@ -596,7 +566,8 @@ QProgressBar {
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">background-color: rgb(232, 232, 232);
+</string>
            </property>
           </widget>
          </item>
@@ -685,7 +656,8 @@ QProgressBar {
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">background-color: rgb(232, 232, 232);
+</string>
            </property>
           </widget>
          </item>
@@ -728,7 +700,7 @@ QProgressBar {
   </layout>
  </widget>
  <resources>
-  <include location="../resources/resource.qrc"/>
+  <include location="../../../../ControlCenter/src/ui/resources/resource.qrc"/>
  </resources>
  <connections/>
 </ui>
