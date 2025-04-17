@@ -1,2 +1,0 @@
-PyQt5
-pymodbus==2.5.3
