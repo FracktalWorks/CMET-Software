@@ -32,7 +32,7 @@ class pi_control:
         except Exception as e:
             output_widget.append(f"Error: {e}")
             print(f"Error: {e}")  # Print error to console
-            log_error(e)
+            print(e)
 
     def send_gcode_file(file_path, output_widget):
         """Read G-code from a file and send each line to the controller."""
@@ -45,7 +45,7 @@ class pi_control:
                         time.sleep(0.2)  # Short delay to avoid command overlap
         except FileNotFoundError:
             output_widget.append(f"Error: File {file_path} not found.")
-            log_error(f"File {file_path} not found.")
+            print(f"File {file_path} not found.")
 
 
     # Z movements
