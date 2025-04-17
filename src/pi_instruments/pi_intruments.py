@@ -1,9 +1,6 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import (QWidget, QPushButton, QSpinBox, QProgressBar, QSizePolicy, QVBoxLayout, QMessageBox, QLabel)
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QTimer
-from PyQt5.QtGui import QImage
-import numpy as np
-from ui.custom_widgets import ImageWidget
 from utils.helpers import run_async
 import time
 from processAutomationController.processAutomationController import ProcessAutomationController
