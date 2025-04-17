@@ -3,9 +3,25 @@ from PyQt5.QtWidgets import (QWidget, QPushButton, QSpinBox, QProgressBar, QSize
 from PyQt5.QtCore import pyqtSlot, pyqtSignal, QTimer
 from utils.helpers import run_async
 import time
+import socket  # Import socket for connection testing
 from processAutomationController.processAutomationController import ProcessAutomationController
 
+HOST = "10.0.0.100"  # Motion controller host
+PORT = 701           # Motion controller port
+
 class pi_control:
+
+    @staticmethod
+    def test_connection(output_widget):
+        """Check connection to the motion controller."""
+        try:
+            with socket.create_connection((HOST, PORT), timeout=5):
+                output_widget.append(f"Connected to {HOST}:{PORT}")
+                return True
+        except Exception as e:
+            output_widget.append(f"Connection failed: {e}")
+            return False
+        
     @staticmethod
     def send_command(command, output_widget):
         """Send a command to the motion controller and display the response."""
@@ -31,6 +47,7 @@ class pi_control:
             print(f"Error: {e}")  # Print error to console
             print(e)
 
+    @staticmethod
     def send_gcode_file(file_path, output_widget):
         """Read G-code from a file and send each line to the controller."""
         try:
@@ -43,6 +60,7 @@ class pi_control:
         except FileNotFoundError:
             output_widget.append(f"Error: File {file_path} not found.")
             print(f"File {file_path} not found.")
+
 
 
     # Z movements
