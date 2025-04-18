@@ -72,7 +72,8 @@ class pi_control:
             
     def pi_enable(self):
         """Enable all axes."""
-        self.send_command("ENABLE (X,Y,Z)", self.output_widget)
+        self.send_command("ENABLE (X,Y)", self.output_widget)
+        self.send_command("ENABLE (Z)", self.output_widget) 
 
     # Z movements
     def pi_Zhome(self):
