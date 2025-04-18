@@ -29,7 +29,7 @@ class ControlScreen(QWidget):
     def load_tabs(self):
         try:
             # Load pi_instruments_control_screen
-            pi_instruments_widget = uic.loadUi('src/ui/control_screen/pi_instruemnts_control_screen/pi_instruemnts_control_screen.ui')
+            pi_instruments_widget = uic.loadUi('src/ui/control_screen/pi_instruments_control_screen/pi_instruments_control_screen.ui')
             pi_instruments_layout = QVBoxLayout()
             pi_instruments_layout.addWidget(pi_instruments_widget)
             self.tabWidget.widget(0).setLayout(pi_instruments_layout)

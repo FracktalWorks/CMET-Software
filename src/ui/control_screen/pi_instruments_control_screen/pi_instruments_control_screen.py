@@ -11,7 +11,7 @@ class PiInstrumentsControlScreen(QWidget):
 
     def load_ui(self):
         try:
-            uic.loadUi('src/ui/control_screen/pi_instruemnts_control_screen/pi_instruemnts_control_screen.ui', self)
+            uic.loadUi('src/ui/control_screen/pi_instruemnts_control_screen/pi_instruments_control_screen.ui', self)
             print("PiInstrumentsControlScreen UI loaded successfully")
         except Exception as e:
             print(f"Failed to load PiInstrumentsControlScreen UI: {e}")
