@@ -11,89 +11,121 @@ class PiInstrumentsControlScreen(QWidget):
 
     def load_ui(self):
         try:
-            uic.loadUi('src/ui/control_screen/pi_instruemnts_control_screen/pi_instruments_control_screen.ui', self)
+            uic.loadUi('src/ui/control_screen/pi_instruments_control_screen/pi_instruments_control_screen.ui', self)
             print("PiInstrumentsControlScreen UI loaded successfully")
         except Exception as e:
             print(f"Failed to load PiInstrumentsControlScreen UI: {e}")
 
     def pi_setup_connections(self):
-        self.findChild(QPushButton, 'piConnect').clicked.connect(self.pi_connect)
+        # Assign each button to an object
+        self.piConnectButton = self.findChild(QPushButton, 'piConnect')
+        self.piEnableButton = self.findChild(QPushButton, 'piEnableButton')
+        self.piBeforeLayerStartButton = self.findChild(QPushButton, 'piBeforeLayerStart')
+        self.piAfterLayerStartButton = self.findChild(QPushButton, 'piAfterLayerStart')
+        self.piBeforeVatChangeButton = self.findChild(QPushButton, 'piBeforeVatChange')
+        self.piAfterVatChangeButton = self.findChild(QPushButton, 'piAfterVatChange')
+        self.macro1Button = self.findChild(QPushButton, 'Macro1Button')
+        self.macro2Button = self.findChild(QPushButton, 'Macro2Button')
+        self.piMoveZMButton = self.findChild(QPushButton, 'piMoveZMButton')
+        self.piHomeZButton = self.findChild(QPushButton, 'piHomeZButton')
+        self.piMoveZPButton = self.findChild(QPushButton, 'piMoveZPButton')
+        self.piMoveXMButton = self.findChild(QPushButton, 'piMoveXMButton')
+        self.piMoveXPButton = self.findChild(QPushButton, 'piMoveXPButton')
+        self.piHomeXYButton = self.findChild(QPushButton, 'piHomeXYButton')
+        self.piMoveYMButton = self.findChild(QPushButton, 'piMoveYMButton')
+        self.piMoveYPButton = self.findChild(QPushButton, 'piMoveYPButton')
 
-        self.findChild(QPushButton, 'piEnableButton').clicked.connect(self.pi_enable)
+        # Debug prints to check if buttons are found
+        print(f"piConnectButton: {self.piConnectButton}")
+        print(f"piEnableButton: {self.piEnableButton}")
+        print(f"piBeforeLayerStartButton: {self.piBeforeLayerStartButton}")
+        print(f"piAfterLayerStartButton: {self.piAfterLayerStartButton}")
+        print(f"piBeforeVatChangeButton: {self.piBeforeVatChangeButton}")
+        print(f"piAfterVatChangeButton: {self.piAfterVatChangeButton}")
+        print(f"macro1Button: {self.macro1Button}")
+        print(f"macro2Button: {self.macro2Button}")
+        print(f"piMoveZMButton: {self.piMoveZMButton}")
+        print(f"piHomeZButton: {self.piHomeZButton}")
+        print(f"piMoveZPButton: {self.piMoveZPButton}")
+        print(f"piMoveXMButton: {self.piMoveXMButton}")
+        print(f"piMoveXPButton: {self.piMoveXPButton}")
+        print(f"piHomeXYButton: {self.piHomeXYButton}")
+        print(f"piMoveYMButton: {self.piMoveYMButton}")
+        print(f"piMoveYPButton: {self.piMoveYPButton}")
 
-        self.findChild(QPushButton, 'piBeforeLayerStart').clicked.connect(self.pi_before_layer_start)
-        self.findChild(QPushButton, 'piAfterLayerStart').clicked.connect(self.pi_after_layer_start)
-        self.findChild(QPushButton, 'piBeforeVatChange').clicked.connect(self.pi_before_vat_change)
-        self.findChild(QPushButton, 'piAfterVatChange').clicked.connect(self.pi_after_vat_change)
-        self.findChild(QPushButton, 'Macro1Button').clicked.connect(self.macro1)
-        self.findChild(QPushButton, 'Macro2Button').clicked.connect(self.macro2)
+        # Check if all buttons are found
+        if not all([
+            self.piConnectButton, self.piEnableButton, self.piBeforeLayerStartButton,
+            self.piAfterLayerStartButton, self.piBeforeVatChangeButton, self.piAfterVatChangeButton,
+            self.macro1Button, self.macro2Button, self.piMoveZMButton, self.piHomeZButton,
+            self.piMoveZPButton, self.piMoveXMButton, self.piMoveXPButton, self.piHomeXYButton,
+            self.piMoveYMButton, self.piMoveYPButton
+        ]):
+            raise ValueError("One or more buttons not found in the UI file")
 
-        self.findChild(QPushButton, 'piMoveZMButton').clicked.connect(self.pi_ZM)
-        self.findChild(QPushButton, 'piHomeZButton').clicked.connect(self.pi_Zhome)
-        self.findChild(QPushButton, 'piMoveZPButton').clicked.connect(self.pi_ZP)
+        # Connect buttons to their respective functions
+        self.piConnectButton.clicked.connect(self.pi_connect)
+        self.piEnableButton.clicked.connect(self.pi_enable)
+        self.piBeforeLayerStartButton.clicked.connect(self.pi_before_layer_start)
+        self.piAfterLayerStartButton.clicked.connect(self.pi_after_layer_start)
+        self.piBeforeVatChangeButton.clicked.connect(self.pi_before_vat_change)
+        self.piAfterVatChangeButton.clicked.connect(self.pi_after_vat_change)
+        self.macro1Button.clicked.connect(self.macro1)
+        self.macro2Button.clicked.connect(self.macro2)
+        self.piMoveZMButton.clicked.connect(self.pi_ZM)
+        self.piHomeZButton.clicked.connect(self.pi_Zhome)
+        self.piMoveZPButton.clicked.connect(self.pi_ZP)
+        self.piMoveXMButton.clicked.connect(self.pi_XM)
+        self.piMoveXPButton.clicked.connect(self.pi_XP)
+        self.piHomeXYButton.clicked.connect(self.pi_XYhome)
+        self.piMoveYMButton.clicked.connect(self.pi_YM)
+        self.piMoveYPButton.clicked.connect(self.pi_YP)
 
-        self.findChild(QPushButton, 'piMoveXMButton').clicked.connect(self.pi_XM)
-        self.findChild(QPushButton, 'piMoveXPButton').clicked.connect(self.pi_XP)
-        self.findChild(QPushButton, 'piHomeXYButton').clicked.connect(self.pi_XYhome)
-        self.findChild(QPushButton, 'piMoveYMButton').clicked.connect(self.pi_YM)
-        self.findChild(QPushButton, 'piMoveYPButton').clicked.connect(self.pi_YP)
-    
+    # Placeholder methods for button actions
     def pi_connect(self):
-        """Connect to the PI controller."""
-        try:
-            self.pi_control.connect()
-            print("Connected to PI controller")
-        except Exception as e:
-            print(f"Failed to connect to PI controller: {e}")
-            
+        print("Connecting to PI controller...")
+
     def pi_enable(self):
-        self.pi_control.pi_enable()
+        print("Enabling PI controller...")
 
     def pi_ZM(self):
-        self.pi_control.pi_ZM()
+        print("Moving Z axis down...")
 
     def pi_Zhome(self):
-        self.pi_control.pi_Zhome()
+        print("Homing Z axis...")
 
     def pi_ZP(self):
-        self.pi_control.pi_ZP()
-
-    def pi_XYhome(self):
-        self.pi_control.pi_XYhome()
+        print("Moving Z axis up...")
 
     def pi_XM(self):
-        self.pi_control.pi_XM()
+        print("Moving X axis left...")
 
     def pi_XP(self):
-        self.pi_control.pi_XP()
+        print("Moving X axis right...")
 
     def pi_YM(self):
-        self.pi_control.pi_YM()
+        print("Moving Y axis down...")
 
     def pi_YP(self):
-        self.pi_control.pi_YP()
-
-    # Add placeholder methods for other buttons
-    def pi_part_cleaning(self):
-        pass
+        print("Moving Y axis up...")
 
     def pi_before_layer_start(self):
-        pass
+        print("Before layer start...")
 
     def pi_after_layer_start(self):
-        pass
+        print("After layer start...")
 
     def pi_before_vat_change(self):
-        pass
+        print("Before vat change...")
 
     def pi_after_vat_change(self):
-        pass
+        print("After vat change...")
 
     def macro1(self):
-        pass
+        print("Executing Macro 1...")
 
     def macro2(self):
-        pass
+        print("Executing Macro 2...")
 
 
 
