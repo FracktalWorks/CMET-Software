@@ -110,7 +110,6 @@
             <font>
              <family>Gotham</family>
              <pointsize>16</pointsize>
-             <weight>50</weight>
              <bold>false</bold>
              <underline>false</underline>
              <strikeout>false</strikeout>
@@ -141,7 +140,6 @@
             <font>
              <family>Gotham</family>
              <pointsize>16</pointsize>
-             <weight>50</weight>
              <bold>false</bold>
              <underline>false</underline>
              <strikeout>false</strikeout>
@@ -249,7 +247,6 @@ background-color: rgba(255, 255, 255, 0);</string>
              <font>
               <family>Gotham</family>
               <pointsize>12</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
               <underline>false</underline>
               <strikeout>false</strikeout>
@@ -320,7 +317,6 @@ background-color: rgba(255, 255, 255, 0);</string>
              <font>
               <family>Gotham</family>
               <pointsize>10</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
               <underline>false</underline>
               <strikeout>false</strikeout>
@@ -362,7 +358,6 @@ background-color: rgba(255, 255, 255, 0);</string>
              <font>
               <family>Gotham</family>
               <pointsize>10</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
               <underline>false</underline>
               <strikeout>false</strikeout>
@@ -410,7 +405,6 @@ background-color: rgba(255, 255, 255, 0);</string>
              <font>
               <family>Gotham</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
               <underline>false</underline>
               <strikeout>false</strikeout>
@@ -452,7 +446,6 @@ background-color: rgba(255, 255, 255, 0);</string>
              <font>
               <family>Gotham</family>
               <pointsize>16</pointsize>
-              <weight>50</weight>
               <bold>false</bold>
               <underline>false</underline>
               <strikeout>false</strikeout>
@@ -496,7 +489,7 @@ background-color: rgba(255, 255, 255, 0);</string>
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <property name="iconSize">
          <size>

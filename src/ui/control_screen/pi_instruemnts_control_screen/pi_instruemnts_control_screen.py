@@ -18,7 +18,9 @@ class PiInstrumentsControlScreen(QWidget):
 
     def pi_setup_connections(self):
         self.findChild(QPushButton, 'piPartCleaning').clicked.connect(self.pi_part_cleaning)
-        self.findChild(QPushButton, 'piHomeButton').clicked.connect(self.pi_home)
+
+        self.findChild(QPushButton, 'piEnableButton').clicked.connect(self.pi_enable)
+
         self.findChild(QPushButton, 'piBeforeLayerStart').clicked.connect(self.pi_before_layer_start)
         self.findChild(QPushButton, 'piAfterLayerStart').clicked.connect(self.pi_after_layer_start)
         self.findChild(QPushButton, 'piBeforeVatChange').clicked.connect(self.pi_before_vat_change)
@@ -35,6 +37,9 @@ class PiInstrumentsControlScreen(QWidget):
         self.findChild(QPushButton, 'piHomeXYButton').clicked.connect(self.pi_XYhome)
         self.findChild(QPushButton, 'piMoveYMButton').clicked.connect(self.pi_YM)
         self.findChild(QPushButton, 'piMoveYPButton').clicked.connect(self.pi_YP)
+    
+    def pi_enable(self):
+        self.pi_control.pi_enable()
 
     def pi_ZM(self):
         self.pi_control.pi_ZM()
@@ -62,9 +67,6 @@ class PiInstrumentsControlScreen(QWidget):
 
     # Add placeholder methods for other buttons
     def pi_part_cleaning(self):
-        pass
-
-    def pi_home(self):
         pass
 
     def pi_before_layer_start(self):

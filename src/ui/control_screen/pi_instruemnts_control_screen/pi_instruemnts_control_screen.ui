@@ -505,7 +505,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="1">
-             <widget class="QPushButton" name="piHomeButton">
+             <widget class="QPushButton" name="piEnableButton">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -550,7 +550,7 @@ QPushButton:focus {
 }</string>
               </property>
               <property name="text">
-               <string>Home</string>
+               <string>ENABLE X Y Z </string>
               </property>
               <property name="iconSize">
                <size>

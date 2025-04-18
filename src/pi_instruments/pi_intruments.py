@@ -62,6 +62,9 @@ class pi_control:
             print(f"File {file_path} not found.")
 
 
+    def pi_enable(self):
+        """Enable all axes."""
+        self.send_command("ENABLE (X,Y,Z)", self.output_widget)
 
     # Z movements
     def pi_Zhome(self):
