@@ -8,6 +8,10 @@ from ui.main_window import MainWindow
 # Set up logging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Add these lines after basicConfig to quiet PyQt debug messages
+logging.getLogger('PyQt5').setLevel(logging.INFO)
+logging.getLogger('uic').setLevel(logging.INFO)
+
 def main():
     logging.debug("Starting application")
     app = QApplication(sys.argv)
@@ -27,4 +31,4 @@ def main():
         logging.error("Exception occurred", exc_info=True)
 
 if __name__ == "__main__":
-    main()    
+    main()

@@ -2,6 +2,8 @@ from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QVBoxLayout
 from PyQt5.QtCore import pyqtSignal
 from processAutomationController.processAutomationController import ProcessAutomationController
+from ui.control_screen.pi_instruments_control_screen.pi_instruments_control_screen import PiInstrumentsControlScreen
+from ui.control_screen.robot_control_screen.robot_control_screen import RobotControlScreen
 
 class ControlScreen(QWidget):
     progress_update_signal = pyqtSignal(int)
@@ -29,18 +31,20 @@ class ControlScreen(QWidget):
     def load_tabs(self):
         try:
             # Load pi_instruments_control_screen
-            pi_instruments_widget = uic.loadUi('src/ui/control_screen/pi_instruments_control_screen/pi_instruments_control_screen.ui')
-            pi_instruments_layout = QVBoxLayout()
-            pi_instruments_layout.addWidget(pi_instruments_widget)
-            self.tabWidget.widget(0).setLayout(pi_instruments_layout)
+            pi_tab = self.tabWidget.widget(0)
+            self.pi_instruments_screen = PiInstrumentsControlScreen(self)
+            pi_layout = QVBoxLayout(pi_tab)
+            pi_layout.addWidget(self.pi_instruments_screen)
+            pi_tab.setLayout(pi_layout)
 
             # Load robot_control_screen
-            robot_control_widget = uic.loadUi('src/ui/control_screen/robot_control_screen/robot_control_screen.ui')
-            robot_control_layout = QVBoxLayout()
-            robot_control_layout.addWidget(robot_control_widget)
-            self.tabWidget.widget(1).setLayout(robot_control_layout)
+            robot_tab = self.tabWidget.widget(1)
+            self.robot_control_screen = RobotControlScreen(self)
+            robot_layout = QVBoxLayout(robot_tab)
+            robot_layout.addWidget(self.robot_control_screen)
+            robot_tab.setLayout(robot_layout)
 
-            print("Tabs loaded successfully")
+            print("Control screen tabs loaded successfully")
         except Exception as e:
-            print(f"Failed to load tabs: {e}")
+            print(f"Failed to load control screen tabs: {e}")
 

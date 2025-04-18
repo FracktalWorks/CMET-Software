@@ -1,20 +1,32 @@
+import logging
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget, QPushButton
 from pi_instruments.pi_intruments import pi_control
 
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
+
 class PiInstrumentsControlScreen(QWidget):
     def __init__(self, parent=None):
         super(PiInstrumentsControlScreen, self).__init__(parent)
+        print("!!!! PiInstrumentsControlScreen initialized")
         self.load_ui()
         self.pi_control = pi_control()  # Create an instance of pi_control
         self.pi_setup_connections()
+        # Initialize button states
+        self.piEnableButton.setEnabled(False)  # Disabled until connected
+        self.enable_movement_buttons(False)    # Disabled until enabled
 
     def load_ui(self):
         try:
-            uic.loadUi('src/ui/control_screen/pi_instruments_control_screen/pi_instruments_control_screen.ui', self)
+            # Use absolute path to ensure UI file is found
+            import os
+            ui_file = os.path.join(os.path.dirname(__file__), 'pi_instruments_control_screen.ui')
+            uic.loadUi(ui_file, self)
             print("PiInstrumentsControlScreen UI loaded successfully")
         except Exception as e:
             print(f"Failed to load PiInstrumentsControlScreen UI: {e}")
+            raise  # This will help see the full error traceback
 
     def pi_setup_connections(self):
         # Assign each button to an object
@@ -83,31 +95,87 @@ class PiInstrumentsControlScreen(QWidget):
 
     # Placeholder methods for button actions
     def pi_connect(self):
-        print("Connecting to PI controller...")
+        logger.debug("Connecting to PI controller...")
+        try:
+            success = self.pi_control.connect()
+            if success:
+                logger.info("Successfully connected to PI controller")
+                self.piConnectButton.setEnabled(False)  # Disable connect button after successful connection
+                self.piEnableButton.setEnabled(True)    # Enable the enable button
+            else:
+                logger.error("Failed to connect to PI controller")
+        except Exception as e:
+            logger.error(f"Error connecting to PI controller: {e}")
 
     def pi_enable(self):
-        print("Enabling PI controller...")
+        try:
+            success = self.pi_control.enable()
+            if success:
+                logger.info("PI controller enabled")
+                self.enable_movement_buttons(True)  # Enable movement buttons after successful enable
+            else:
+                logger.error("Failed to enable PI controller")
+        except Exception as e:
+            logger.error(f"Error enabling PI controller: {e}")
 
     def pi_ZM(self):
-        print("Moving Z axis down...")
+        try:
+            self.pi_control.move_z(-1)  # Adjust value as needed
+            logger.info("Moving Z axis down")
+        except Exception as e:
+            logger.error(f"Error moving Z axis down: {e}")
 
     def pi_Zhome(self):
-        print("Homing Z axis...")
+        try:
+            self.pi_control.home_z()
+            logger.info("Homing Z axis")
+        except Exception as e:
+            logger.error(f"Error homing Z axis: {e}")
 
     def pi_ZP(self):
-        print("Moving Z axis up...")
+        try:
+            self.pi_control.move_z(1)  # Adjust value as needed
+            logger.info("Moving Z axis up")
+        except Exception as e:
+            logger.error(f"Error moving Z axis up: {e}")
 
     def pi_XM(self):
-        print("Moving X axis left...")
+        try:
+            self.pi_control.move_x(-1)  # Adjust value as needed
+            logger.info("Moving X axis left")
+        except Exception as e:
+            logger.error(f"Error moving X axis left: {e}")
 
     def pi_XP(self):
-        print("Moving X axis right...")
+        try:
+            self.pi_control.move_x(1)  # Adjust value as needed
+            logger.info("Moving X axis right")
+        except Exception as e:
+            logger.error(f"Error moving X axis right: {e}")
 
     def pi_YM(self):
-        print("Moving Y axis down...")
+        try:
+            self.pi_control.move_y(-1)  # Adjust value as needed
+            logger.info("Moving Y axis down")
+        except Exception as e:
+            logger.error(f"Error moving Y axis down: {e}")
 
     def pi_YP(self):
-        print("Moving Y axis up...")
+        try:
+            self.pi_control.move_y(1)  # Adjust value as needed
+            logger.info("Moving Y axis up")
+        except Exception as e:
+            logger.error(f"Error moving Y axis up: {e}")
+
+    def enable_movement_buttons(self, enabled=True):
+        """Enable or disable movement buttons based on controller state"""
+        movement_buttons = [
+            self.piMoveZMButton, self.piHomeZButton, self.piMoveZPButton,
+            self.piMoveXMButton, self.piMoveXPButton, self.piHomeXYButton,
+            self.piMoveYMButton, self.piMoveYPButton
+        ]
+        for button in movement_buttons:
+            button.setEnabled(enabled)
 
     def pi_before_layer_start(self):
         print("Before layer start...")
