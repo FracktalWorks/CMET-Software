@@ -90,79 +90,69 @@ class PiInstrumentsControlScreen(QWidget):
         self.piMoveYMButton.clicked.connect(self.pi_YM)
         self.piMoveYPButton.clicked.connect(self.pi_YP)
 
-        # Initialize button states
-        self.piEnableButton.setEnabled(False)  # Disabled until connected
-        self.enable_movement_buttons(False)    # Disabled until enabled
-
-    def enable_movement_buttons(self, enable):
-        """Enable or disable movement buttons."""
-        self.piMoveZMButton.setEnabled(enable)
-        self.piHomeZButton.setEnabled(enable)
-        self.piMoveZPButton.setEnabled(enable)
-        self.piMoveXMButton.setEnabled(enable)
-        self.piMoveXPButton.setEnabled(enable)
-        self.piHomeXYButton.setEnabled(enable)
-        self.piMoveYMButton.setEnabled(enable)
-        self.piMoveYPButton.setEnabled(enable)
-
     # Placeholder methods for button actions
     def pi_connect(self):
-        self.pi_control.pi_connect()
+        self.pi_control.pi_connect(self.output_widget)  # Pass the output widget
+        print("Connecting to PI controller...")
 
     def pi_enable(self):
-        self.pi_control.pi_enable()
+        self.pi_control.pi_enable(self.output_widget)  # Pass the output widget
         print("Enabling PI controller...")
-        
 
     def pi_ZM(self):
-        self.pi_control.pi_ZM()
+        self.pi_control.pi_ZM(self.output_widget)  # Pass the output widget
         print("Moving Z axis down...")
 
     def pi_Zhome(self):
-        self.pi_control.pi_Zhome()
+        self.pi_control.pi_Zhome(self.output_widget)  # Pass the output widget
         print("Homing Z axis...")
 
     def pi_ZP(self):
-        self.pi_control.pi_ZP()
+        self.pi_control.pi_ZP(self.output_widget)  # Pass the output widget
         print("Moving Z axis up...")
-    
+
     def pi_XYhome(self):
-        self.pi_control.pi_XYhome()
+        self.pi_control.pi_XYhome(self.output_widget)  # Pass the output widget
         print("Homing XY axes...")
 
     def pi_XM(self):
-        self.pi_control.pi_XM()
+        self.pi_control.pi_XM(self.output_widget)  # Pass the output widget
         print("Moving X axis left...")
 
     def pi_XP(self):
-        self.pi_control.pi_XP()
+        self.pi_control.pi_XP(self.output_widget)  # Pass the output widget
         print("Moving X axis right...")
 
     def pi_YM(self):
-        self.pi_control.pi_YM()
+        self.pi_control.pi_YM(self.output_widget)  # Pass the output widget
         print("Moving Y axis down...")
 
     def pi_YP(self):
-        self.pi_control.pi_YP()
+        self.pi_control.pi_YP(self.output_widget)  # Pass the output widget
         print("Moving Y axis up...")
 
-
     def pi_before_layer_start(self):
+        self.pi_control.pi_before_layer_start(self.output_widget)  # Pass the output widget
         print("Before layer start...")
 
     def pi_after_layer_start(self):
+        self.pi_control.pi_after_layer_start(self.output_widget)  # Pass the output widget
         print("After layer start...")
 
     def pi_before_vat_change(self):
+        self.pi_control.pi_before_vat_change(self.output_widget)  # Pass the output widget
         print("Before vat change...")
 
     def pi_after_vat_change(self):
+        self.pi_control.pi_after_vat_change(self.output_widget)  # Pass the output widget
         print("After vat change...")
 
     def macro1(self):
+        self.pi_control.macro1(self.output_widget)  # Pass the output widget
         print("Executing Macro 1...")
 
     def macro2(self):
+        self.pi_control.macro2(self.output_widget)  # Pass the output widget
         print("Executing Macro 2...")
 
 
