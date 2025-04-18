@@ -17,7 +17,7 @@ class PiInstrumentsControlScreen(QWidget):
             print(f"Failed to load PiInstrumentsControlScreen UI: {e}")
 
     def pi_setup_connections(self):
-        self.findChild(QPushButton, 'piPartCleaning').clicked.connect(self.pi_part_cleaning)
+        self.findChild(QPushButton, 'piConnect').clicked.connect(self.pi_connect)
 
         self.findChild(QPushButton, 'piEnableButton').clicked.connect(self.pi_enable)
 
@@ -38,6 +38,14 @@ class PiInstrumentsControlScreen(QWidget):
         self.findChild(QPushButton, 'piMoveYMButton').clicked.connect(self.pi_YM)
         self.findChild(QPushButton, 'piMoveYPButton').clicked.connect(self.pi_YP)
     
+    def pi_connect(self):
+        """Connect to the PI controller."""
+        try:
+            self.pi_control.connect()
+            print("Connected to PI controller")
+        except Exception as e:
+            print(f"Failed to connect to PI controller: {e}")
+            
     def pi_enable(self):
         self.pi_control.pi_enable()
 

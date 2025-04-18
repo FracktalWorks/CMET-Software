@@ -281,7 +281,7 @@ QPushButton:focus {
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QPushButton" name="piPartCleaning">
+             <widget class="QPushButton" name="piConnect">
               <property name="minimumSize">
                <size>
                 <width>200</width>
@@ -326,7 +326,7 @@ QPushButton:focus {
 }</string>
               </property>
               <property name="text">
-               <string>Part Cleaning</string>
+               <string>Connect PI</string>
               </property>
               <property name="iconSize">
                <size>

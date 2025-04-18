@@ -61,7 +61,15 @@ class pi_control:
             output_widget.append(f"Error: File {file_path} not found.")
             print(f"File {file_path} not found.")
 
-
+    def pi_connect(self, output_widget):
+        """Connect to the PI controller."""
+        if self.test_connection(output_widget):
+            output_widget.append("Connected to PI controller")
+            print("Connected to PI controller")
+        else:
+            output_widget.append("Failed to connect to PI controller")
+            print("Failed to connect to PI controller")
+            
     def pi_enable(self):
         """Enable all axes."""
         self.send_command("ENABLE (X,Y,Z)", self.output_widget)
